@@ -1,10 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <linux/input.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <iostream>
 
 struct input_event ev;
 const char* pFile = "/dev/input/event2";
@@ -25,5 +25,5 @@ int main(int argc, char *argv[]) {
 	   ev.type,ev.code,ev.value);
     close(fd);    
     return 0;
-};
+}
 
